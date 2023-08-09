@@ -1,0 +1,38 @@
+name: stellarhub
+description: An app for people who really like space:).
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get: ^4.6.5
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_screenutil: ^5.8.4
+  flutter_animate: ^4.2.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Space
+      fonts:
+        - asset: assets/fonts/Space_Bd_BT_Bold.ttf
+    - family: Freud
+      fonts:
+        - asset: assets/fonts/ABeeZee-Regular.ttf
