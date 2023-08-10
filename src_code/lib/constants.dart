@@ -17,6 +17,14 @@ double kNavWidth = 24.w;
 double kNavHeight = 24.h;
 double kDefaultPadding = 10.w;
 
+// API Keys--------------------------------------
+
+const String kNasaKey = "nk0WaJ8HqbikMbumKNGGCwyjSdGFn96mHZcSjIw9";
+
+// API Endpoints---------------------------------
+
+const String kAPOD = "https://api.nasa.gov/planetary/apod?api_key=$kNasaKey";
+
 // Text Styles-----------------------------------
 
 TextStyle kDefaultText(double fontSize, String fontFamily) {
