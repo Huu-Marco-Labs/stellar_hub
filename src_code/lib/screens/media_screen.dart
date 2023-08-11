@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/app_bar_widget.dart';
+import 'package:stellarhub/widgets/sliver_app_bar_widget.dart';
 
 import '../constants.dart';
 
@@ -11,7 +11,14 @@ class MediaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kSecondaryColor,
-      appBar: appBarWidget('MEDIA', 'Resource Archive'),
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return [
+            sliverAppBarWidget('MEDIA', 'Resource Archive'),
+          ];
+        },
+        body: Container(),
+      ),
     );
   }
 }

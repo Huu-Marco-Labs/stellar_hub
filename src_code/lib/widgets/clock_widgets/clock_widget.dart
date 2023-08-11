@@ -22,7 +22,7 @@ Container clockWidget() {
           ],
         ),
         Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               'to launch',

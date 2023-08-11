@@ -44,6 +44,7 @@ class HomeScreen extends StatelessWidget {
                 padding:
                     EdgeInsets.symmetric(horizontal: kDefaultPadding * 1.7),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'TODAY',
