@@ -6,8 +6,8 @@ import '../constants.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import '../widgets/header_widget.dart';
-import '../widgets/row_widget.dart';
+import '../widgets/header_widgets/list_header_widget.dart';
+import '../widgets/header_widgets/view_all_header_widget.dart';
 import '../widgets/list_view_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,16 +66,16 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 4),
             child: Column(
               children: [
-                rowWidget('News', 1),
+                viewAll('News', 1),
                 listViewWidget(images1, 178.h),
                 SizedBox(height: kSizedBox),
-                rowWidget('Images of the Day', 3),
+                viewAll('Images of the Day', 3),
                 listViewWidget(images2, 125.h),
                 SizedBox(height: kSizedBox),
-                rowWidget('Videos of the Day', 3),
+                viewAll('Videos of the Day', 3),
                 listViewWidget(images3, 167.h),
                 SizedBox(height: kSizedBox),
-                headerWidget('Recent Tweets'),
+                listHeaderWidget('Recent Tweets'),
                 SizedBox(height: kSizedBox),
                 Image.asset('assets/images/test4.png'),
               ],
