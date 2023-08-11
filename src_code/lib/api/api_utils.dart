@@ -1,1 +1,0 @@
-//all helper methods for the apis

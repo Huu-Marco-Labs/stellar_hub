@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Flutter_Projects\\stellar_hub\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "D:\\Flutter_Projects\\stellar_hub\\src_code\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
