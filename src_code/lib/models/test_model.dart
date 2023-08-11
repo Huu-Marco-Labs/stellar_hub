@@ -21,3 +21,10 @@ List<String> images5 = [
   'assets/images/test5.png',
   'assets/images/test5.png',
 ];
+
+List<String> exploreItems = [
+  'Missions',
+  '3D Models',
+  'Augumented Reality',
+  'History'
+];
