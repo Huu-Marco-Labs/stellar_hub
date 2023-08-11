@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/build_app_bar_widget.dart';
+import '../widgets/app_bar_widget.dart';
 
 import '../constants.dart';
 
@@ -11,7 +11,7 @@ class MediaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kSecondaryColor,
-      appBar: buildAppBarWidget('MEDIA', 'Resource Archive'),
+      appBar: appBarWidget('MEDIA', 'Resource Archive'),
     );
   }
 }

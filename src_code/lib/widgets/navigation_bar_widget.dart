@@ -21,7 +21,7 @@ class NavigationBarWidget extends StatefulWidget {
 
 class NavigationBarWidgetState extends State<NavigationBarWidget> {
   final List<Widget> _pages = [
-    HomeScreen(),
+    const HomeScreen(),
     const NewsScreen(),
     const SearchScreen(),
     const MediaScreen(),

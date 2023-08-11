@@ -16,14 +16,10 @@ const double kBorderFullRadius = 55;
 double kNavWidth = 24.w;
 double kNavHeight = 24.h;
 double kDefaultPadding = 10.w;
-
-// API Keys--------------------------------------
-
-const String kNasaKey = "nk0WaJ8HqbikMbumKNGGCwyjSdGFn96mHZcSjIw9";
-
-// API Endpoints---------------------------------
-
-const String kAPOD = "https://api.nasa.gov/planetary/apod?api_key=$kNasaKey";
+double kSizedBox = 15.h;
+double kDefaultMargin = 17.5.w;
+double kBigText = 20.sp;
+double kSmallText = 15.sp;
 
 // Text Styles-----------------------------------
 
@@ -32,6 +28,7 @@ TextStyle kDefaultText(double fontSize, String fontFamily) {
     color: kPrimaryColor,
     fontSize: fontSize,
     fontFamily: fontFamily,
+    overflow: TextOverflow.ellipsis,
   );
 }
 
@@ -41,6 +38,7 @@ TextStyle kBoldText(double fontSize, String fontFamily) {
     fontSize: fontSize,
     fontFamily: fontFamily,
     fontWeight: FontWeight.bold,
+    overflow: TextOverflow.ellipsis,
   );
 }
 
@@ -49,5 +47,6 @@ TextStyle kLowWeightText(double fontSize, String fontFamily) {
     color: kGrey,
     fontSize: fontSize,
     fontFamily: fontFamily,
+    overflow: TextOverflow.ellipsis,
   );
 }
