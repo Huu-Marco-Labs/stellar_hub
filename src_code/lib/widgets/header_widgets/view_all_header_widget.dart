@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 import '../../constants.dart';
 import '../../controller/index_controller.dart';
 
-Row viewAll(String title, int index) {
+Row viewAllHeaderWidget(String title,
+    {int? index, String? destinationRoute, bool useNavigation = false}) {
   final NavIndexController navIndexController = Get.find();
 
   return Row(
@@ -19,7 +20,11 @@ Row viewAll(String title, int index) {
       ),
       TextButton(
         onPressed: () {
-          navIndexController.updatePageIndex(index);
+          if (useNavigation) {
+            Get.toNamed('$destinationRoute');
+          } else {
+            navIndexController.updatePageIndex(index!);
+          }
         },
         child: Row(
           children: [
@@ -33,10 +38,7 @@ Row viewAll(String title, int index) {
             SizedBox(
               width: 24.w,
               height: 24.h,
-              child: const Icon(
-                Icons.arrow_forward_ios_sharp,
-                color: kGrey,
-              ),
+              child: kForwardIcon,
             ),
           ],
         ),
