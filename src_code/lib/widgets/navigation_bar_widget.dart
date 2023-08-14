@@ -6,8 +6,8 @@ import '../screens/explore_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/media_screen.dart';
 import '../screens/news_screen.dart';
-import '../screens/search_screen.dart';
-import 'circular_icon_widget.dart';
+import '../screens/search_screens/search_screen.dart';
+import 'icon_widgets/circular_icon_widget.dart';
 import 'package:get/get.dart';
 
 class NavigationBarWidget extends StatefulWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../screens/on_boarding_screen.dart';
-import '../constants.dart';
+import 'on_boarding_screen.dart';
+import '../../constants.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../controller/splash_controller.dart';
+import '../../controller/splash_controller.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

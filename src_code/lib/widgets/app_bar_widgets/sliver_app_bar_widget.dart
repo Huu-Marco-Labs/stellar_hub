@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../constants.dart';
 
-import '../constants.dart';
-
-AppBar appBarWidget(String title, String subTitle) {
-  return AppBar(
+SliverAppBar sliverAppBarWidget(String title, String subTitle) {
+  return SliverAppBar(
     backgroundColor: kSecondaryColor,
     toolbarHeight: 100.h,
     title: Padding(
@@ -18,7 +17,7 @@ AppBar appBarWidget(String title, String subTitle) {
           ),
           Text(
             subTitle,
-            style: kLowWeightText(16.sp, kFreudFont),
+            style: kLowWeightText(18.sp, kFreudFont),
           ),
         ],
       ),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stellarhub/models/test_model.dart';
-import 'package:stellarhub/widgets/list_view_widget.dart';
+import '../models/test_model.dart';
 import '../constants.dart';
-import '../widgets/header_widgets/title_header_widget.dart';
+import '../widgets/app_bar_widgets/sliver_app_bar_widget.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -19,11 +17,7 @@ class ExploreScreen extends StatelessWidget {
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
-                SliverAppBar(
-                  backgroundColor: kSecondaryColor,
-                  toolbarHeight: 100.h,
-                  title: titleHeaderWidget(),
-                )
+                sliverAppBarWidget('EXPLORE', 'The Universe'),
               ];
             },
             body: Column(
@@ -31,7 +25,7 @@ class ExploreScreen extends StatelessWidget {
                 Row(children: [
                   Expanded(
                     child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                       width: 80.w,
                       height: 80.h,
                       child: ListView.builder(
@@ -40,8 +34,8 @@ class ExploreScreen extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return Container(
                               decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(23)),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(23)),
                                   border: Border.all(color: kPrimaryColor)),
                               child: Text(
                                 exploreItems[index],

@@ -22,9 +22,27 @@ List<String> images5 = [
   'assets/images/test5.png',
 ];
 
+List<String> images6 = [
+  'assets/images/test6.png',
+  'assets/images/test6.png',
+  'assets/images/test6.png',
+];
+
+List<String> images7 = [
+  'assets/images/space_sand.png',
+  'assets/images/space_sand.png',
+  'assets/images/space_sand.png',
+];
+
+List<String> images8 = [
+  'assets/images/on_moon.png',
+  'assets/images/on_moon.png',
+  'assets/images/on_moon.png',
+];
+
 List<String> exploreItems = [
   'Missions',
   '3D Models',
-  'Augumented Reality',
+  'Augmented Reality',
   'History'
 ];
