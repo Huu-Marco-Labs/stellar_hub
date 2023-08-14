@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants.dart';
 import 'package:get/get.dart';
 
-class NewsCard extends StatelessWidget {
-  const NewsCard({super.key});
+class NewsCardWidget extends StatelessWidget {
+  const NewsCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

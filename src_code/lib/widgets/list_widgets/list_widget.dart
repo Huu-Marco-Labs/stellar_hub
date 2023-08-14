@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stellarhub/widgets/card_widgets/news_card.dart';
+import 'package:stellarhub/widgets/card_widgets/news_card_widget.dart';
 import '../../constants.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +12,7 @@ Row listWidget(List<String> images, double height) {
           height: height,
           child: GestureDetector(
             onTap: () {
-              Get.to(() => const NewsCard());
+              Get.to(() => const NewsCardWidget());
             },
             child: ListView.builder(
               itemCount: 3,
