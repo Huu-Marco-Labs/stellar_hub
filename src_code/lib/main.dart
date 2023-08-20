@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
-import '../controller/index_controller.dart';
+import 'controller/index_controllers/nav_index_controller.dart';
 import 'screens/welcome_screens/interest_screen.dart';
 import '../screens/explore_screen.dart';
 import '../screens/home_screen.dart';
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
             ),
             GetPage(
               name: HomeScreen.homeScreenRoute,
-              page: () => const HomeScreen(),
+              page: () => HomeScreen(),
             ),
             GetPage(
               name: NewsScreen.newsScreenRoute,

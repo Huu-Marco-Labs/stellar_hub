@@ -4,6 +4,7 @@ import 'package:stellarhub/widgets/card_widgets/news_card_widget.dart';
 import '../../constants.dart';
 import 'package:get/get.dart';
 
+//TODO: This widget will be deleted later
 Row listWidget(List<String> images, double height) {
   return Row(
     children: [

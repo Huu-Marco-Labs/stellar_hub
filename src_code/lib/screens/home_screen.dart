@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 
 import '../widgets/header_widgets/list_header_widget.dart';
 import '../widgets/header_widgets/view_all_header_widget.dart';
+import '../widgets/list_widgets/future_list_widget.dart';
 import '../widgets/list_widgets/list_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -70,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                 listWidget(images1, 178.h),
                 SizedBox(height: kSizedBox),
                 viewAllHeaderWidget('Images of the Day', index: 3),
-                listWidget(images2, 125.h),
+                futureListWidget(),
                 SizedBox(height: kSizedBox),
                 viewAllHeaderWidget('Videos of the Day', index: 3),
                 listWidget(images3, 167.h),

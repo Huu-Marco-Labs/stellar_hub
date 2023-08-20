@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../constants.dart';
-import '../../controller/index_controller.dart';
+import '../../controller/index_controllers/nav_index_controller.dart';
 
 Row viewAllHeaderWidget(String title,
     {int? index, String? destinationRoute, bool useNavigation = false}) {
