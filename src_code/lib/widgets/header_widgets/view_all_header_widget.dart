@@ -31,15 +31,11 @@ Row viewAllHeaderWidget(String title,
             Text(
               'View all',
               style: kLowWeightText(
-                12.sp,
+                13.sp,
                 kFreudFont,
               ),
             ),
-            SizedBox(
-              width: 24.w,
-              height: 24.h,
-              child: kForwardIcon,
-            ),
+            kForwardIcon,
           ],
         ),
       ),

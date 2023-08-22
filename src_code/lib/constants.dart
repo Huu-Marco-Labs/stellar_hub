@@ -12,7 +12,7 @@ const Color kGrey = Colors.grey;
 Icon kForwardIcon = Icon(
   Icons.arrow_forward_ios_outlined,
   color: kGrey,
-  size: 30.w,
+  size: 24.w,
 );
 
 // Fonts-----------------------------------------

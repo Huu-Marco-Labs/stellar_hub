@@ -34,9 +34,8 @@ List<String> images8 = [
   'assets/images/on_moon.png',
 ];
 
-List<String> exploreItems = [
-  'Missions',
-  '3D Models',
-  'Augmented Reality',
-  'History'
+List<String> images9 = [
+  'assets/images/rover.png',
+  'assets/images/rover.png',
+  'assets/images/rover.png'
 ];

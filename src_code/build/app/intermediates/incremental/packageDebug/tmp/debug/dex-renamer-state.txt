@@ -1,4 +1,4 @@
-#Sun Aug 20 04:10:14 AST 2023
-base.0=D\:\\Flutter_Projects\\stellar_hub\\src_code\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Tue Aug 22 14:41:33 CEST 2023
+base.0=C\:\\Users\\brand\\Desktop\\stellar_hub\\src_code\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

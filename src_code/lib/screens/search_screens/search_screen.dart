@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../constants.dart';
+import '../../models/test_model.dart';
 import '../../widgets/app_bar_widgets/app_bar_widget.dart';
 import '../../widgets/header_widgets/list_header_widget.dart';
 import '../../widgets/list_widgets/colored_list_widget.dart';
-import '../../models/test_model.dart';
-import '../../constants.dart';
 import '../../widgets/search_widgets/image_search_card.dart';
 import '../../widgets/search_widgets/mission_search_card.dart';
 import '../../widgets/search_widgets/search_bar_widget.dart';
@@ -26,7 +27,7 @@ class SearchScreen extends StatelessWidget {
             SizedBox(height: kSizedBox),
             listHeaderWidget('Recent'),
             SizedBox(height: kSizedBox),
-            coloredListWidget(images8, 145.h, right: 0.1.w),
+            coloredListWidget(images8, 145.h),
             SizedBox(height: kSizedBox),
             listHeaderWidget('Popular'),
             SizedBox(height: kSizedBox),
