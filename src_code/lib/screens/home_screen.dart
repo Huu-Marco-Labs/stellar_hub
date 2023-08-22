@@ -8,7 +8,8 @@ import 'package:intl/intl.dart';
 
 import '../widgets/header_widgets/list_header_widget.dart';
 import '../widgets/header_widgets/view_all_header_widget.dart';
-import '../widgets/list_view_widget.dart';
+import '../widgets/list_widgets/future_list_widget.dart';
+import '../widgets/list_widgets/list_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -66,18 +67,19 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 4),
             child: Column(
               children: [
-                viewAll('News', 1),
-                listViewWidget(images1, 178.h),
+                viewAllHeaderWidget('News', index: 1),
+                listWidget(images1, 178.h),
                 SizedBox(height: kSizedBox),
-                viewAll('Images of the Day', 3),
-                listViewWidget(images2, 125.h),
+                viewAllHeaderWidget('Images of the Day', index: 3),
+                futureListWidget(),
                 SizedBox(height: kSizedBox),
-                viewAll('Videos of the Day', 3),
-                listViewWidget(images3, 167.h),
+                viewAllHeaderWidget('Videos of the Day', index: 3),
+                listWidget(images3, 167.h),
                 SizedBox(height: kSizedBox),
                 listHeaderWidget('Recent Tweets'),
                 SizedBox(height: kSizedBox),
                 Image.asset('assets/images/test4.png'),
+                SizedBox(height: kSizedBoxEnd),
               ],
             ),
           ),

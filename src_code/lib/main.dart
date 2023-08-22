@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:stellarhub/controller/index_controller.dart';
-import '../screens/interest_screen.dart';
+import 'controller/index_controllers/nav_index_controller.dart';
+import 'screens/welcome_screens/interest_screen.dart';
 import '../screens/explore_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/media_screen.dart';
 import '../screens/news_screen.dart';
-import '../screens/on_boarding_screen.dart';
-import '../screens/search_screen.dart';
+import 'screens/welcome_screens/on_boarding_screen.dart';
+import 'screens/search_screens/search_screen.dart';
 import '../screens/setting_screen.dart';
 import '../widgets/navigation_bar_widget.dart';
-import '../screens/splash_screen.dart';
+import 'screens/welcome_screens/splash_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
