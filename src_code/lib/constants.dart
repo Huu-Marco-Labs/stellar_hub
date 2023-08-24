@@ -60,9 +60,10 @@ TextStyle kBoldText(double fontSize, String fontFamily,
   );
 }
 
-TextStyle kLowWeightText(double fontSize, String fontFamily) {
+TextStyle kLowWeightText(double fontSize, String fontFamily,
+    {Color color = kGrey}) {
   return TextStyle(
-    color: kGrey,
+    color: color,
     fontSize: fontSize,
     fontFamily: fontFamily,
     overflow: TextOverflow.ellipsis,

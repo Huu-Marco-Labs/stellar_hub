@@ -90,10 +90,61 @@ class ExploreScreen extends StatelessWidget {
               coloredListWidget(images9, 145.h),
               SizedBox(height: kSizedBox),
               viewAllHeaderWidget('Alphabetically'),
-              scrollCardWidget(),
+              exploreGridWidget(),
               SizedBox(height: kSizedBox),
               viewAllHeaderWidget('Schedule'),
-              SizedBox(height: kSizedBox),
+              Column(
+                children: List.generate(
+                  2,
+                  (index) {
+                    return Container(
+                      margin: EdgeInsets.only(top: index == 0 ? 0 : 10.h),
+                      decoration: BoxDecoration(
+                          color: kPrimaryColor,
+                          borderRadius: BorderRadius.circular(23.w)),
+                      height: 65.h,
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(left: 22.w, top: 12.w),
+                                child: Text(
+                                  "February 14, 2021",
+                                  style: kLowWeightText(12.sp, kFreudFont,
+                                      color: kSecondaryColor),
+                                ),
+                              ),
+                              Spacer(),
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(right: 24.w, top: 12.w),
+                                child: Text(
+                                  "11:45 PM EST",
+                                  style: kLowWeightText(12.sp, kFreudFont,
+                                      color: kSecondaryColor),
+                                ),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(left: 22.w, top: 5.w),
+                                child: Text(
+                                  "Mission Russian Progress 77",
+                                  style: kBoldText(15.sp, kFreudFont,
+                                      color: kSecondaryColor),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
@@ -101,25 +152,41 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  Container scrollCardWidget() {
-    return Container(
+  SizedBox exploreGridWidget() {
+    return SizedBox(
       height: 188.h,
       width: 378.w,
-      child: GridView(
-        shrinkWrap: true,
+      child: GridView.builder(
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
           mainAxisSpacing: 20.w,
-          crossAxisSpacing: 10.w,
+          crossAxisSpacing: 10.h,
+          childAspectRatio: 1 / 3,
         ),
-        children: List.generate(9, (index) {
-          return Container(
-            width: 200.w,
-            height: 2.h,
-            color: kPrimaryColor,
-          );
-        }),
+        itemCount: 9, // Total number of items
+        itemBuilder: (context, index) {
+          return Stack(children: [
+            Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(23.w),
+                  color: kPrimaryColor),
+            ),
+            Row(
+              children: [
+                Image.asset(images10[index]),
+                Padding(
+                  padding: EdgeInsets.only(left: 10.w),
+                  child: Text(
+                    text1[index],
+                    style: kBoldText(15.sp, kFreudFont, color: kSecondaryColor),
+                  ),
+                ),
+              ],
+            )
+          ]);
+        },
       ),
     );
   }

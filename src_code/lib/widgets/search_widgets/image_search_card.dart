@@ -11,13 +11,12 @@ Row imageSearchCard() {
           children: [
             Image.asset(
               'assets/images/idk.png',
-              width: 153.w,
               height: 105.h,
             ),
             Positioned(
               right: 0,
               child: Container(
-                width: 260.w,
+                width: 275.w,
                 height: 104.h,
                 padding: EdgeInsets.symmetric(
                   horizontal: 30.w,

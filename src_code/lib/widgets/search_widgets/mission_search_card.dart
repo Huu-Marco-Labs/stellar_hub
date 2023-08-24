@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants.dart';
 
-Row missionSearchCard() {
+Widget missionSearchCard() {
   return Row(
     children: [
       Expanded(
@@ -11,14 +11,13 @@ Row missionSearchCard() {
           children: [
             Image.asset(
               'assets/images/artemis.png',
-              width: 233.w,
-              height: 145.h,
+              height: 125.h,
             ),
             Positioned(
               right: 0,
               child: Container(
-                width: 150.w,
-                height: 145.h,
+                width: 220.w,
+                height: 125.h,
                 padding: EdgeInsets.symmetric(
                   horizontal: 30.w,
                   vertical: 20.h,
