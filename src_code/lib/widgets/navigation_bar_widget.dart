@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
 import '../constants.dart';
 import '../controller/index_controllers/nav_index_controller.dart';
 import '../screens/explore_screen.dart';
@@ -8,7 +10,6 @@ import '../screens/media_screen.dart';
 import '../screens/news_screen.dart';
 import '../screens/search_screens/search_screen.dart';
 import 'icon_widgets/circular_icon_widget.dart';
-import 'package:get/get.dart';
 
 class NavigationBarWidget extends StatefulWidget {
   static const String navigationBarWidget = '/navigationBar';

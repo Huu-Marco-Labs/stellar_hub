@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../models/test_model.dart';
-import '../screens/setting_screen.dart';
-import '../constants.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+import '../constants.dart';
+import '../models/test_model.dart';
+import '../screens/setting_screen.dart';
 import '../widgets/header_widgets/list_header_widget.dart';
 import '../widgets/header_widgets/view_all_header_widget.dart';
 import '../widgets/list_widgets/future_list_widget.dart';
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 4),
+            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 1.7),
             child: Column(
               children: [
                 viewAllHeaderWidget('News', index: 1),

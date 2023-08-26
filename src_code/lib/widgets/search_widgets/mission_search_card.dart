@@ -9,9 +9,15 @@ Widget missionSearchCard() {
       Expanded(
         child: Stack(
           children: [
-            Image.asset(
-              'assets/images/artemis.png',
-              height: 125.h,
+            SizedBox(
+              height: 145.h,
+              width: 180.w,
+              child: FittedBox(
+                fit: BoxFit.fill,
+                child: Image.asset(
+                  'assets/images/artemis.png',
+                ),
+              ),
             ),
             Positioned(
               right: 0,
