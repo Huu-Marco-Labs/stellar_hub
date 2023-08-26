@@ -9,15 +9,20 @@ Row imageSearchCard() {
       Expanded(
         child: Stack(
           children: [
-            Image.asset(
-              'assets/images/idk.png',
-              width: 153.w,
+            SizedBox(
               height: 105.h,
+              width: 120.w,
+              child: FittedBox(
+                fit: BoxFit.fill,
+                child: Image.asset(
+                  'assets/images/idk.png',
+                ),
+              ),
             ),
             Positioned(
               right: 0,
               child: Container(
-                width: 260.w,
+                width: 275.w,
                 height: 104.h,
                 padding: EdgeInsets.symmetric(
                   horizontal: 30.w,

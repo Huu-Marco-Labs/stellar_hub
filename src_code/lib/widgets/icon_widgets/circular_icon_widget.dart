@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../constants.dart';
 
 class CircularIconWidget extends StatelessWidget {
   const CircularIconWidget({
     Key? key,
     required this.iconData,
-    this.isSelected = false,
+    required this.isSelected,
   }) : super(key: key);
 
   final IconData iconData;

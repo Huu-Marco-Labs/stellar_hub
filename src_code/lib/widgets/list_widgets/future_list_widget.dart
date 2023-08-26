@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../constants.dart';
 import '../../models/nasa_models/image_nasa_model.dart';
 import '../../services/nasa_services/image_nasa_services.dart';
@@ -35,7 +36,7 @@ FutureBuilder<List<ImageNasaModel>> futureListWidget() {
                       children: [
                         Container(
                           margin: EdgeInsets.only(right: kDefaultPadding + 3),
-                          child: Image.network(nasaImage.url),
+                          child: Image.network(nasaImage.hdurl),
                         ),
                         Positioned(
                           left: 0.w,

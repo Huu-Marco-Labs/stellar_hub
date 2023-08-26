@@ -1,33 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../constants.dart';
 
 Column clockColumnWidget(String time, String timeDetails, double font) {
   return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.start,
     children: [
-      Stack(
-        children: [
-          Text(
-            time,
-            style: TextStyle(
-              fontSize: font,
-              fontFamily: kSpaceFont,
-            ),
+      Text(
+        time,
+        style: TextStyle(
+          fontSize: font,
+          fontFamily: kSpaceFont,
+        ),
+      ),
+      Transform.translate(
+        offset: Offset(0, -10.h),
+        child: Text(
+          timeDetails,
+          style: TextStyle(
+            color: kGrey,
+            fontSize: 15.sp,
+            fontFamily: kFreudFont,
           ),
-          Positioned(
-            top: 45.h,
-            right: 19.w,
-            child: Text(
-              timeDetails,
-              style: TextStyle(
-                color: kGrey,
-                fontSize: 15.sp,
-                fontFamily: kFreudFont,
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     ],
   );
