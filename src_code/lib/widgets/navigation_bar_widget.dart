@@ -39,7 +39,7 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
       () => Scaffold(
         body: Stack(
           children: [
-            _pages[widget.indexController.currentPageIndex()],
+            _pages[widget.indexController.currentPageIndex.value],
             Positioned(
               bottom: 20.h,
               left: 0.w,
@@ -55,12 +55,16 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
                       type: BottomNavigationBarType.fixed,
                       selectedFontSize: 0,
                       backgroundColor: kPrimaryColor,
+                      currentIndex:
+                          widget.indexController.currentPageIndex.value,
+                      onTap: _onItemTapped,
                       items: [
                         BottomNavigationBarItem(
                           icon: CircularIconWidget(
                             iconData: Icons.calendar_today_outlined,
                             isSelected:
-                                widget.indexController.currentPageIndex() == 0,
+                                widget.indexController.currentPageIndex.value ==
+                                    0,
                           ),
                           label: '',
                         ),
@@ -68,7 +72,8 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
                           icon: CircularIconWidget(
                             iconData: Icons.article_outlined,
                             isSelected:
-                                widget.indexController.currentPageIndex() == 1,
+                                widget.indexController.currentPageIndex.value ==
+                                    1,
                           ),
                           label: '',
                         ),
@@ -76,7 +81,8 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
                           icon: CircularIconWidget(
                             iconData: Icons.search_outlined,
                             isSelected:
-                                widget.indexController.currentPageIndex() == 2,
+                                widget.indexController.currentPageIndex.value ==
+                                    2,
                           ),
                           label: '',
                         ),
@@ -84,7 +90,8 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
                           icon: CircularIconWidget(
                             iconData: Icons.perm_media_outlined,
                             isSelected:
-                                widget.indexController.currentPageIndex() == 3,
+                                widget.indexController.currentPageIndex.value ==
+                                    3,
                           ),
                           label: '',
                         ),
@@ -92,13 +99,12 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
                           icon: CircularIconWidget(
                             iconData: Icons.explore_outlined,
                             isSelected:
-                                widget.indexController.currentPageIndex() == 4,
+                                widget.indexController.currentPageIndex.value ==
+                                    4,
                           ),
                           label: '',
                         ),
                       ],
-                      currentIndex: widget.indexController.currentPageIndex(),
-                      onTap: _onItemTapped,
                     ),
                   ),
                 ),
