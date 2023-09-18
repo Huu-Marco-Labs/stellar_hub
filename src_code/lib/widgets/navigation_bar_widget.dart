@@ -4,12 +4,11 @@ import 'package:get/get.dart';
 
 import '../constants.dart';
 import '../controller/index_controllers/nav_index_controller.dart';
-import '../screens/explore_screen.dart';
-import '../screens/home_screen.dart';
-import '../screens/media_screen.dart';
-import '../screens/news_screen.dart';
+import '../screens/main_screens/explore_screen.dart';
+import '../screens/main_screens/home_screen.dart';
+import '../screens/main_screens/media_screen.dart';
+import '../screens/main_screens/news_screen.dart';
 import '../screens/search_screens/search_screen.dart';
-import 'icon_widgets/circular_icon_widget.dart';
 
 class NavigationBarWidget extends StatefulWidget {
   static const String navigationBarWidget = '/navigationBar';
@@ -22,7 +21,7 @@ class NavigationBarWidget extends StatefulWidget {
 
 class NavigationBarWidgetState extends State<NavigationBarWidget> {
   final List<Widget> _pages = [
-    HomeScreen(),
+    const HomeScreen(),
     const NewsScreen(),
     const SearchScreen(),
     const MediaScreen(),
@@ -60,47 +59,37 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
                       onTap: _onItemTapped,
                       items: [
                         BottomNavigationBarItem(
-                          icon: CircularIconWidget(
-                            iconData: Icons.calendar_today_outlined,
-                            isSelected:
-                                widget.indexController.currentPageIndex.value ==
-                                    0,
+                          icon: circularIconWidget(
+                            Icons.calendar_today_outlined,
+                            widget.indexController.currentPageIndex.value == 0,
                           ),
                           label: '',
                         ),
                         BottomNavigationBarItem(
-                          icon: CircularIconWidget(
-                            iconData: Icons.article_outlined,
-                            isSelected:
-                                widget.indexController.currentPageIndex.value ==
-                                    1,
+                          icon: circularIconWidget(
+                            Icons.article_outlined,
+                            widget.indexController.currentPageIndex.value == 1,
                           ),
                           label: '',
                         ),
                         BottomNavigationBarItem(
-                          icon: CircularIconWidget(
-                            iconData: Icons.search_outlined,
-                            isSelected:
-                                widget.indexController.currentPageIndex.value ==
-                                    2,
+                          icon: circularIconWidget(
+                            Icons.search_outlined,
+                            widget.indexController.currentPageIndex.value == 2,
                           ),
                           label: '',
                         ),
                         BottomNavigationBarItem(
-                          icon: CircularIconWidget(
-                            iconData: Icons.perm_media_outlined,
-                            isSelected:
-                                widget.indexController.currentPageIndex.value ==
-                                    3,
+                          icon: circularIconWidget(
+                            Icons.perm_media_outlined,
+                            widget.indexController.currentPageIndex.value == 3,
                           ),
                           label: '',
                         ),
                         BottomNavigationBarItem(
-                          icon: CircularIconWidget(
-                            iconData: Icons.explore_outlined,
-                            isSelected:
-                                widget.indexController.currentPageIndex.value ==
-                                    4,
+                          icon: circularIconWidget(
+                            Icons.explore_outlined,
+                            widget.indexController.currentPageIndex.value == 4,
                           ),
                           label: '',
                         ),
@@ -115,4 +104,29 @@ class NavigationBarWidgetState extends State<NavigationBarWidget> {
       ),
     );
   }
+}
+
+Widget circularIconWidget(IconData iconData, bool isSelected) {
+  final Color bgColor = isSelected ? kSecondaryColor : kPrimaryColor;
+  final Color iconColor = isSelected ? kPrimaryColor : kSecondaryColor;
+
+  return Center(
+    child: Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(
+          width: 2.0.w,
+          color: kSecondaryColor,
+        ),
+      ),
+      child: CircleAvatar(
+        backgroundColor: bgColor,
+        radius: kBorderRadius,
+        child: Icon(
+          iconData,
+          color: iconColor,
+        ),
+      ),
+    ),
+  );
 }

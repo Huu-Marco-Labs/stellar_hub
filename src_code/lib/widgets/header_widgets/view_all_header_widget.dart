@@ -4,41 +4,56 @@ import 'package:get/get.dart';
 import '../../constants.dart';
 import '../../controller/index_controllers/nav_index_controller.dart';
 
-Row viewAllHeaderWidget(String title,
-    {int? index, String? destinationRoute, bool useNavigation = false}) {
-  final NavIndexController navIndexController = Get.find();
+class ViewAllHeaderWidget extends StatelessWidget {
+  final String title;
+  final int? index;
+  final String? destinationRoute;
+  final bool useNavigation;
 
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text(
-        title,
-        style: kBoldText(
-          15.sp,
-          kFreudFont,
+  const ViewAllHeaderWidget({
+    super.key,
+    required this.title,
+    this.index,
+    this.destinationRoute,
+    this.useNavigation = false,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final NavIndexController navIndexController = Get.find();
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: kBoldText(
+            15.sp,
+            kFreudFont,
+          ),
         ),
-      ),
-      TextButton(
-        onPressed: () {
-          if (useNavigation) {
-            Get.toNamed('$destinationRoute');
-          } else {
-            navIndexController.updatePageIndex(index!);
-          }
-        },
-        child: Row(
-          children: [
-            Text(
-              'View all',
-              style: kLowWeightText(
-                13.sp,
-                kFreudFont,
+        TextButton(
+          onPressed: () {
+            if (useNavigation) {
+              Get.toNamed('$destinationRoute');
+            } else {
+              navIndexController.updatePageIndex(index!);
+            }
+          },
+          child: Row(
+            children: [
+              Text(
+                'View all',
+                style: kLowWeightText(
+                  13.sp,
+                  kFreudFont,
+                ),
               ),
-            ),
-            kForwardIcon,
-          ],
+              kForwardIcon,
+            ],
+          ),
         ),
-      ),
-    ],
-  );
+      ],
+    );
+  }
 }

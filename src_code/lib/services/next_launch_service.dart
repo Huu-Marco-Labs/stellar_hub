@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 import '../models/next_launch_model.dart';
 
@@ -17,10 +18,14 @@ class NextLaunchService {
         final jsonData = response.data as Map<String, dynamic>;
         nextLaunchModel = NextLaunchModel.toJson(jsonData);
       } else {
-        print('Error: Next Launch not responded correctly.');
+        if (kDebugMode) {
+          print('Error: Next Launch not responded correctly.');
+        }
       }
     } catch (e) {
-      print('Error: Next Launch not responded correctly. -> $e');
+      if (kDebugMode) {
+        print('Error: Next Launch not responded correctly. -> $e');
+      }
     }
 
     return nextLaunchModel;
