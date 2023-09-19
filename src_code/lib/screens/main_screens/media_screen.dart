@@ -7,7 +7,7 @@ import '../../widgets/list_widgets/list_widget.dart';
 import '../../widgets/header_widgets/view_all_header_widget.dart';
 import '../../widgets/app_bar_widgets/sliver_app_bar_widget.dart';
 
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 
 class MediaScreen extends StatelessWidget {
   const MediaScreen({super.key});

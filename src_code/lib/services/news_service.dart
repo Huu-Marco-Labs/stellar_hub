@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 
-import '../models/space_news.model.dart';
+import '../models/home_screen_models/space_news.model.dart';
 
-class SpaceFlightService {
+class NewsService {
   final Dio dio = Dio();
 
   Future<List<SpaceNews>> fetchSpaceNews() async {

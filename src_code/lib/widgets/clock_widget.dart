@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:stellarhub/controller/clock_controller.dart';
 
-import '../constants.dart';
+import '../utilities/constants.dart';
 
 class ClockWidget extends StatelessWidget {
   const ClockWidget({super.key});

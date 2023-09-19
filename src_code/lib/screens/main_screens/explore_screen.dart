@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:stellarhub/models/test_model.dart';
-import 'package:stellarhub/widgets/list_widgets/colored_list_widget.dart';
+import '../../models/test_model.dart';
+import '../../widgets/list_widgets/colored_list_widget.dart';
 
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 import '../../controller/index_controllers/filter_index_controller.dart';
 import '../../widgets/app_bar_widgets/sliver_app_bar_widget.dart';
 import '../../widgets/header_widgets/view_all_header_widget.dart';

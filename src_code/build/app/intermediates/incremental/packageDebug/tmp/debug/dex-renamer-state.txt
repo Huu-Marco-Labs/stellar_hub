@@ -1,4 +1,4 @@
-#Mon Sep 18 16:29:16 CEST 2023
+#Tue Sep 19 14:41:46 CEST 2023
 base.0=F\:\\projects\\stellar_hub\\src_code\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

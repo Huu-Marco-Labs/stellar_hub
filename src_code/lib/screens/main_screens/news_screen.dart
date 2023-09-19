@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:stellarhub/widgets/header_widgets/list_header_widget.dart';
+import '../../widgets/header_widgets/list_header_widget.dart';
 
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 import '../../controller/clock_controller.dart';
 import '../../models/test_model.dart';
 import '../../widgets/app_bar_widgets/sliver_app_bar_widget.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive/hive.dart';
 import '../../widgets/navigation_bar_widget.dart';
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 import '../../models/on_boarding_model.dart';
 import 'package:get/get.dart';
 

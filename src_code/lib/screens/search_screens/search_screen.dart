@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stellarhub/screens/search_screens/search_delegate_screen.dart';
 import 'package:stellarhub/widgets/header_widgets/list_header_widget.dart';
 
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 import '../../models/test_model.dart';
 import '../../widgets/list_widgets/colored_list_widget.dart';
 

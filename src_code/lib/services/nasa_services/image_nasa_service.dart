@@ -1,20 +1,26 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import '../../models/image_nasa_model.dart';
-import '../../constants.dart';
+import '../../utilities/keys.dart';
+import '../../models/home_screen_models/image_nasa_model.dart';
 
 class ImageNasaService {
   static const String _baseUrl = 'https://api.nasa.gov/planetary/apod';
-  static const String _apiKey = kApiKey;
+  static const String _apiKey = kNasaApiKey;
 
   final Dio _dio = Dio();
 
-  final String date1 =
-      DateTime.now().subtract(Duration(days: 0)).toString().substring(0, 10);
-  final String date2 =
-      DateTime.now().subtract(Duration(days: 1)).toString().substring(0, 10);
-  final String date3 =
-      DateTime.now().subtract(Duration(days: 2)).toString().substring(0, 10);
+  final String date1 = DateTime.now()
+      .subtract(const Duration(days: 0))
+      .toString()
+      .substring(0, 10);
+  final String date2 = DateTime.now()
+      .subtract(const Duration(days: 1))
+      .toString()
+      .substring(0, 10);
+  final String date3 = DateTime.now()
+      .subtract(const Duration(days: 2))
+      .toString()
+      .substring(0, 10);
 
   Future<List<ImageNasaModel>> getLast3ImagesOfTheDay() async {
     List<ImageNasaModel> images = [];

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stellarhub/constants.dart';
+import '../../utilities/constants.dart';
 
-import '../../models/space_news.model.dart';
+import '../../models/home_screen_models/space_news.model.dart';
 
 class NewsListWidget extends StatelessWidget {
   final List<SpaceNews> newsList;
@@ -14,7 +14,7 @@ class NewsListWidget extends StatelessWidget {
       height: 120.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 4,
+        itemCount: 3,
         itemBuilder: (context, index) {
           return Stack(
             children: [
@@ -36,13 +36,14 @@ class NewsListWidget extends StatelessWidget {
               ),
               Positioned(
                 left: 29.w,
-                top: 90.h,
+                top: 80.h,
                 bottom: 6.h,
                 child: SizedBox(
                   width: 200.w,
                   child: Text(
                     newsList[index].title,
                     overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
                     style: kBoldText(
                       12.sp,
                       kFreudFont,

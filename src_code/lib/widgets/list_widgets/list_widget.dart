@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stellarhub/widgets/card_widgets/news_card_widget.dart';
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 import 'package:get/get.dart';
 
 //TODO: This widget will be deleted later

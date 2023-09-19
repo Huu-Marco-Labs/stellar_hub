@@ -69,7 +69,3 @@ TextStyle kLowWeightText(double fontSize, String fontFamily,
     overflow: TextOverflow.ellipsis,
   );
 }
-
-// keys----------------------------------------
-
-const String kApiKey = 'jZyD17UXZw9AbNc6ifc7CSbMaNgk36jTTonriy4U';

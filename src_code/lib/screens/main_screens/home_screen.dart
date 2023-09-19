@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:stellarhub/widgets/list_widgets/news_list_widget.dart';
+import '../../widgets/space_video_widget.dart';
+import '../../widgets/list_widgets/news_list_widget.dart';
 
-import '../../constants.dart';
-import '../../models/image_nasa_model.dart';
-import '../../models/space_news.model.dart';
-import '../../models/test_model.dart';
+import '../../services/news_service.dart';
+import '../../utilities/constants.dart';
+import '../../models/home_screen_models/image_nasa_model.dart';
+import '../../models/home_screen_models/space_news.model.dart';
 import '../../services/nasa_services/image_nasa_service.dart';
 import 'setting_screen.dart';
 import '../../widgets/header_widgets/list_header_widget.dart';
 import '../../widgets/header_widgets/view_all_header_widget.dart';
-import '../../widgets/list_widgets/list_widget.dart';
-import '../../services/space_flight_service.dart'; // Import your SpaceFlightService
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -21,11 +20,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final spaceFlightService = NewsService();
     DateTime currentDate = DateTime.now();
     String formattedDate = DateFormat('MMMM d').format(currentDate);
-
-    // Create an instance of SpaceFlightService
-    final spaceFlightService = SpaceFlightService();
 
     return Scaffold(
       backgroundColor: kSecondaryColor,
@@ -84,10 +81,11 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: kSizedBox),
                 const ViewAllHeaderWidget(title: 'Videos of the Day', index: 3),
                 SizedBox(height: kSizedBox),
-                listWidget(images3, 167.h),
+                const SpaceVideoWidget(),
                 SizedBox(height: kSizedBox),
                 const ListHeaderWidget(title: 'Recent Tweets'),
                 SizedBox(height: kSizedBox),
+                //TODO: Add the twitter api widget here
                 Image.asset('assets/images/test4.png'),
                 SizedBox(height: kSizedBoxEnd),
               ],
@@ -98,12 +96,14 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  FutureBuilder<List<SpaceNews>> news(SpaceFlightService spaceFlightService) {
+  FutureBuilder<List<SpaceNews>> news(NewsService spaceFlightService) {
     return FutureBuilder<List<SpaceNews>>(
       future: spaceFlightService.fetchSpaceNews(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
+          return const CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(kPrimaryColor),
+          );
         } else if (snapshot.hasError) {
           return Text('Error: ${snapshot.error}');
         } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
@@ -161,6 +161,7 @@ FutureBuilder<List<ImageNasaModel>> imageOfTheDay() {
                             child: Text(
                               nasaImage.title,
                               overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
                               style: kBoldText(12.sp, kFreudFont),
                             ),
                           ),

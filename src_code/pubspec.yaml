@@ -21,6 +21,7 @@ dependencies:
   flutter_screenutil: ^5.8.4
   flutter_animate: ^4.2.0+1
   intl: ^0.18.1
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:

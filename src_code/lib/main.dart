@@ -16,6 +16,7 @@ import 'screens/welcome_screens/splash_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
+  await Future.delayed(const Duration(seconds: 1));
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await Hive.openBox<bool>('onboarding');
@@ -58,7 +59,7 @@ class MyApp extends StatelessWidget {
             ),
             GetPage(
               name: HomeScreen.homeScreenRoute,
-              page: () => HomeScreen(),
+              page: () => const HomeScreen(),
             ),
             GetPage(
               name: NewsScreen.newsScreenRoute,
