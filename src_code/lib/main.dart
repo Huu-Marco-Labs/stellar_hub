@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:stellarhub/controller/common_controllers/image_nasa_controller.dart';
+import 'package:stellarhub/controller/common_controllers/video_controller.dart';
+import '../controller/common_controllers/news_controller.dart';
 import 'controller/index_controllers/nav_index_controller.dart';
 import 'screens/welcome_screens/interest_screen.dart';
 import 'screens/main_screens/explore_screen.dart';
@@ -21,6 +24,9 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox<bool>('onboarding');
   Get.put<NavIndexController>(NavIndexController());
+  Get.put<NewsController>(NewsController());
+  Get.put<ImageNasaController>(ImageNasaController());
+  Get.put<VideoController>(VideoController());
   runApp(const MyApp());
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

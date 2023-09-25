@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import '../../models/common_models/image_nasa_model.dart';
 import '../../utilities/keys.dart';
-import '../../models/home_screen_models/image_nasa_model.dart';
 
 class ImageNasaService {
   static const String _baseUrl = 'https://api.nasa.gov/planetary/apod';

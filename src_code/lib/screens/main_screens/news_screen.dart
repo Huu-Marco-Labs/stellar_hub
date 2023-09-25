@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import '../../widgets/header_widgets/list_header_widget.dart';
 
 import '../../utilities/constants.dart';
-import '../../controller/clock_controller.dart';
+import '../../controller/common_controllers/clock_controller.dart';
 import '../../models/test_model.dart';
 import '../../widgets/app_bar_widgets/sliver_app_bar_widget.dart';
-import '../../widgets/clock_widget.dart';
+import '../../widgets/common_widgets/clock_widget.dart';
 import '../../widgets/list_widgets/list_widget.dart';
 
 class NewsScreen extends StatefulWidget {

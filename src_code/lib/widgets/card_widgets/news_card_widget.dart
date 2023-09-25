@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../models/common_models/news_model.dart';
 import '../../utilities/constants.dart';
 import 'package:get/get.dart';
 
 class NewsCardWidget extends StatelessWidget {
-  const NewsCardWidget({super.key});
+  final NewsModel news;
+  const NewsCardWidget({super.key, required this.news});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +16,8 @@ class NewsCardWidget extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         child: Stack(
           children: [
-            Image.asset(
-              'assets/images/test.png',
+            Image.network(
+              news.imageUrl,
               width: 637.w,
               height: AppConstants.halfScreenHeight,
               fit: BoxFit.cover,
@@ -64,23 +66,23 @@ class NewsCardWidget extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'NASA approves\nheliophysics\nMissions to Explore\nSun, Earth\'s Aurora',
+                    news.title,
+                    maxLines: 4,
                     style: kBoldText(32.sp, kFreudFont),
                   ),
                   SizedBox(height: kSizedBox),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'NASA Goddard',
+                        news.newsSite,
                         style: kLowWeightText(
                           15.sp,
                           kFreudFont,
                         ),
                       ),
-                      SizedBox(width: kSizedBox * 5),
                       Text(
-                        '1h ago',
+                        news.formattedPublishedDate,
                         style: kLowWeightText(
                           15.sp,
                           kFreudFont,
@@ -88,8 +90,18 @@ class NewsCardWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: kSizedBox),
-                  const Text('data'),
+                  SizedBox(height: kSizedBox * 2),
+                  Text(
+                    news.summary,
+                    maxLines: 10,
+                    style: kDefaultText(15.sp, kFreudFont),
+                  ),
+                  SizedBox(height: kSizedBoxEnd),
+                  Text(
+                    'Wish if i can show you more details but that\'s all what I\'m getting from this api ( I\'m broke help )',
+                    maxLines: 2,
+                    style: kDefaultText(15.sp, kFreudFont),
+                  ),
                 ],
               ),
             ),
