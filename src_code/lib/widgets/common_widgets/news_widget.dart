@@ -38,7 +38,7 @@ class NewsListWidget extends StatelessWidget {
       height: 120.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: newsList.length,
+        itemCount: 3,
         itemBuilder: (context, index) {
           final NewsModel news = newsList[index];
           return GestureDetector(

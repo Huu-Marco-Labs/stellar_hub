@@ -96,7 +96,7 @@ class NewsCardWidget extends StatelessWidget {
                     maxLines: 10,
                     style: kDefaultText(15.sp, kFreudFont),
                   ),
-                  SizedBox(height: kSizedBoxEnd),
+                  SizedBox(height: kSizedBox),
                   Text(
                     'Wish if i can show you more details but that\'s all what I\'m getting from this api ( I\'m broke help )',
                     maxLines: 2,
